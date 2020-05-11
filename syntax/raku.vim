@@ -114,7 +114,7 @@ let s:keywords = {
 
 " These can be immediately followed by parentheses
 let s:types = [
- \ "Object Any Junction Whatever Capture Match",
+ \ "Object Any Cool Junction Whatever Capture Match",
  \ "Signature Proxy Matcher Package Module Class",
  \ "Grammar Scalar Array Hash KeyHash KeySet KeyBag",
  \ "Pair List Seq Range Set Bag Map Mapping Void Undef",
