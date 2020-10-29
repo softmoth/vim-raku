@@ -76,7 +76,7 @@ let s:keywords = {
  \ ],
  \ "rakuRepeat": [
  \   "for loop repeat while until gather given",
- \   "supply react race hyper quietly",
+ \   "supply react race hyper lazy quietly",
  \ ],
  \ "rakuFlowControl": [
  \   "take do when next last redo return return-rw",
