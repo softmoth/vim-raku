@@ -79,7 +79,7 @@ let s:keywords = {
  \   "supply react race hyper lazy quietly",
  \ ],
  \ "rakuFlowControl": [
- \   "take do when next last redo return return-rw",
+ \   "take take-rw do when next last redo return return-rw",
  \   "start default exit make continue break goto leave",
  \   "proceed succeed whenever done",
  \ ],
