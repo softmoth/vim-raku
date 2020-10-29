@@ -84,8 +84,8 @@ let s:keywords = {
  \   "proceed succeed whenever done",
  \ ],
  \ "rakuClosureTrait": [
- \   "BEGIN CHECK INIT START FIRST ENTER LEAVE KEEP",
- \   "UNDO NEXT LAST PRE POST END CATCH CONTROL TEMP",
+ \   "BEGIN CHECK INIT FIRST ENTER LEAVE KEEP",
+ \   "UNDO NEXT LAST PRE POST END CATCH CONTROL",
  \   "DOC QUIT CLOSE COMPOSE",
  \ ],
  \ "rakuException": [
