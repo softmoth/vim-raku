@@ -98,7 +98,7 @@ let s:keywords = {
  \ ],
  \ "rakuOperator": [
  \   "div xx x mod also leg cmp before after eq ne le lt not",
- \   "gt ge eqv ff fff and andthen or xor orelse extra lcm gcd o",
+ \   "gt ge eqv ff fff and andthen or xor orelse lcm gcd o",
  \   "unicmp notandthen minmax",
  \ ],
  \ "rakuType": [
