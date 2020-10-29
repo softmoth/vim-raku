@@ -66,7 +66,7 @@ syn match rakuIdentifier display "\%([A-Za-z_\xC0-\xFF]\%([A-Za-z_\xC0-\xFF0-9]\
 
 let s:keywords = {
  \ "rakuInclude": [
- \   "use require unit",
+ \   "use require import unit",
  \ ],
  \ "rakuConditional": [
  \   "if else elsif unless with orwith without once",
