@@ -105,6 +105,7 @@ let s:keywords = {
  \   "int int1 int2 int4 int8 int16 int32 int64",
  \   "rat rat1 rat2 rat4 rat8 rat16 rat32 rat64",
  \   "buf buf1 buf2 buf4 buf8 buf16 buf32 buf64",
+ \   "blob blob1 blob2 blob4 blob8 blob16 blob32 blob64",
  \   "uint uint1 uint2 uint4 uint8 uint16 uint32 bit bool",
  \   "uint64 utf8 utf16 utf32 bag set mix complex",
  \   "num num32 num64 long longlong Pointer size_t str void",
