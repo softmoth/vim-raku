@@ -81,7 +81,7 @@ let s:keywords = {
  \ "rakuFlowControl": [
  \   "take take-rw do when next last redo return return-rw",
  \   "start default exit make continue break goto leave",
- \   "proceed succeed whenever done",
+ \   "proceed succeed whenever emit done",
  \ ],
  \ "rakuClosureTrait": [
  \   "BEGIN CHECK INIT FIRST ENTER LEAVE KEEP",
