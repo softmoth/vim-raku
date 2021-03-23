@@ -47,3 +47,7 @@ let g:raku_unicode_abbrevs = 1
 [pathogen]: https://github.com/tpope/vim-pathogen
 [vim-plug]: https://github.com/junegunn/vim-plug
 [vundle]: https://github.com/gmarik/Vundle.vim
+
+## License
+
+This project is available under the [MIT License](LICENSE.md).
