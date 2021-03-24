@@ -20,12 +20,6 @@
 "   * Go over the list of keywords/types to see what's deprecated/missing
 "   * Add more support for folding (:help syn-fold)
 "
-" If you want to have Pir code inside Q:PIR// strings highlighted, do:
-"   let raku_embedded_pir=1
-"
-" The above requires pir.vim, which you can find in Parrot's repository:
-" https://github.com/parrot/parrot/tree/master/editor
-"
 " To highlight Perl 5 regexes (m:P5//):
 "   let raku_perl5_regexes=1
 "
@@ -472,12 +466,6 @@ syn match rakuPairsQ_qto  "\%(\_s*:!\?\%([A-Za-z_\xC0-\xFF]\%([A-Za-z_\xC0-\xFF0
 syn match rakuPairsQ_qqto "\%(\_s*:!\?\%([A-Za-z_\xC0-\xFF]\%([A-Za-z_\xC0-\xFF0-9]\|[-'][A-Za-z_\xC0-\xFF]\@=\)*\)\%(([^)]*)\)\?\)*" contained transparent skipwhite skipempty nextgroup=rakuStringQ_qqto
 
 
-if exists("raku_embedded_pir") || exists("raku_extended_all")
-    syn include @rakuPIR syntax/pir.vim
-    syn match rakuQuote_QPIR display "Q[A-Za-z(]\@!\%(\_s*:PIR\)\@=" nextgroup=rakuPairsQ_PIR skipwhite skipempty
-    syn match rakuPairs_QPIR contained "\_s*:PIR" transparent skipwhite skipempty nextgroup=rakuStringQ_PIR
-endif
-
 " hardcoded set of delimiters
 let s:plain_delims = [
   \ ["DQ",          "\\\"",         "\\\"", "rakuEscDoubleQuote",  "\\\\\\@1<!\\\\\\\""],
@@ -506,10 +494,6 @@ for [s:name, s:start_delim, s:end_delim, s:end_group, s:skip] in s:all_delims
     exec "syn region rakuStringQ_to matchgroup=rakuQuote start=\"".s:start_delim."\\z([^".s:end_delim."]\\+\\)".s:end_delim."\" end=\"^\\s*\\z1$\" contained"
     exec "syn region rakuStringQ_qto matchgroup=rakuQuote start=\"".s:start_delim."\\z([^".s:end_delim."]\\+\\)".s:end_delim."\" skip=\"".s:skip."\" end=\"^\\s*\\z1$\" contains=@rakuInterp_q,".s:end_group." contained"
     exec "syn region rakuStringQ_qqto matchgroup=rakuQuote start=\"".s:start_delim."\\z(\[^".s:end_delim."]\\+\\)".s:end_delim."\" skip=\"".s:skip."\" end=\"^\\s*\\z1$\" contains=@rakuInterp_qq,".s:end_group." contained"
-
-    if exists("raku_embedded_pir") || exists("raku_extended_all")
-        exec "syn region rakuStringQ_PIR matchgroup=rakuQuote start=\"".s:start_delim."\" skip=\"".s:skip."\" end=\"".s:end_delim."\" contains=@rakuPIR,".s:end_group." contained"
-    endif
 endfor
 unlet s:name s:start_delim s:end_delim s:end_group s:skip s:plain_delims s:all_delims
 
@@ -1805,7 +1789,6 @@ if version >= 508 || !exists("did_raku_syntax_inits")
     HiLink rakuQuoteQ_to        rakuQuote
     HiLink rakuQuoteQ_qto       rakuQuote
     HiLink rakuQuoteQ_qqto      rakuQuote
-    HiLink rakuQuoteQ_PIR       rakuQuote
     HiLink rakuMatchStart_m     rakuQuote
     HiLink rakuMatchStart_s     rakuQuote
     HiLink rakuMatchStart_tr    rakuQuote
