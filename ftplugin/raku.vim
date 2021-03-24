@@ -1,12 +1,11 @@
 " Vim filetype plugin file
 " Language:      Raku
-" Maintainer:    vim-perl <vim-perl@googlegroups.com>
-" Homepage:      https://github.com/vim-perl/vim-perl6
-" Bugs/requests: https://github.com/vim-perl/vim-perl6/issues
+" Maintainer:    Raku community <perl6-users@perl.org>
+" Homepage:      https://github.com/Raku/vim-raku
+" Bugs/requests: https://github.com/RAku/vim-raku/issues
 " Last Change:   {{LAST_CHANGE}}
-" Contributors:  Hinrik Örn Sigurðsson <hinrik.sig@gmail.com>
 "
-" Based on ftplugin/perl.vim by Dan Sharp <dwsharp at hotmail dot com>
+" Forked from github.com/vim-perl/vim-perl
 
 if exists("b:did_ftplugin") | finish | endif
 let b:did_ftplugin = 1
@@ -30,10 +29,10 @@ setlocal includeexpr=substitute(v:fname,'::','/','g')
 setlocal suffixesadd=.pm6,.pm,.raku,.rakutest,.t6
 setlocal define=[^A-Za-z_]
 
-" The following line changes a global variable but is necessary to make
-" gf and similar commands work. Thanks to Andrew Pimlott for pointing out
-" the problem. If this causes a " problem for you, add an
-" after/ftplugin/raku.vim file that contains
+" The following line changes a global variable but is necessary to make gf
+" and similar commands work. Thanks to Andrew Pimlott for pointing out the
+" problem. If this causes a problem for you, add an after/ftplugin/raku.vim
+" file that contains
 "       set isfname-=:
 set isfname+=:
 setlocal iskeyword=@,48-57,_,192-255,-
